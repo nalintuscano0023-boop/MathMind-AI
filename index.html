@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MathGenius AI — Your premium AI-powered math learning platform. Graph lab, equation solver, AI tutor, practice zone, and smart calculators." />
+  <title>MathGenius AI — Smart Math Learning Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="14" fill="url(#logoGrad)"/>
+            <text x="16" y="21" font-size="14" font-weight="800" fill="white" text-anchor="middle" font-family="Inter">∑</text>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#6366f1"/>
+                <stop offset="100%" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">MathGenius</span>
+          <span class="logo-sub">AI Platform</span>
+        </div>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Navigation</div>
+      <ul class="nav-list">
+        <li class="nav-item active" data-section="dashboard" id="nav-dashboard">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <span class="nav-label">Dashboard</span>
+          <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-section="graph-lab" id="nav-graph-lab">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-8"/></svg>
+          </div>
+          <span class="nav-label">Graph Lab</span>
+          <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-section="equation-solver" id="nav-equation-solver">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="19" cy="17" r="3"/></svg>
+          </div>
+          <span class="nav-label">Equation Solver</span>
+          <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-section="ai-tutor" id="nav-ai-tutor">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <span class="nav-label">AI Tutor</span>
+          <span class="nav-badge">AI</span>
+          <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-section="practice-zone" id="nav-practice-zone">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <span class="nav-label">Practice Zone</span>
+          <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-section="calculators" id="nav-calculators">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h2M12 10h2M16 10h0M8 14h2M12 14h2M16 14h0M8 18h2M12 18h2M16 18h0"/></svg>
+          </div>
+          <span class="nav-label">Calculators</span>
+          <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-section="performance" id="nav-performance">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <span class="nav-label">Performance</span>
+          <div class="nav-indicator"></div>
+        </li>
+      </ul>
+
+      <div class="nav-section-label" style="margin-top:1.5rem">Achievements</div>
+      <div class="sidebar-achievements" id="sidebarAchievements">
+        <div class="ach-mini-loading">Loading...</div>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-level-card">
+        <div class="user-avatar" id="sidebarAvatar">🧪</div>
+        <div class="user-info">
+          <div class="user-name" id="sidebarLevel">Level 1 — Beginner</div>
+          <div class="xp-bar-wrap">
+            <div class="xp-bar" id="sidebarXpBar" style="width:0%"></div>
+          </div>
+          <div class="xp-label" id="sidebarXpLabel">0 / 200 XP</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content" id="mainContent">
+
+    <header class="top-bar">
+      <div class="top-bar-left">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="page-title-wrap">
+          <h1 class="page-title" id="pageTitle">Dashboard</h1>
+          <p class="page-subtitle" id="pageSubtitle">Welcome back! Keep learning.</p>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="streak-badge" id="topStreakBadge">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <span id="topStreakNum">0</span>
+        </div>
+        <div class="xp-pill-container" style="display:flex; flex-direction:column; align-items:center;">
+          <div class="xp-pill" id="topXpPill">
+            <span>✦</span>
+            <span id="topXpNum">0 XP</span>
+          </div>
+          <div class="level-progress-bar-wrap" style="width: 100%; height: 4px; background: var(--surface-3); border-radius: 2px; margin-top: 4px; overflow: hidden; max-width: 80px;">
+            <div class="level-progress-bar-fill" id="topLevelProgress" style="width: 0%; height: 100%; background: var(--primary); transition: width 0.3s ease;"></div>
+          </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <div class="theme-toggle-track">
+            <div class="theme-toggle-thumb">
+              <span class="theme-icon-moon">🌙</span>
+              <span class="theme-icon-sun">☀️</span>
+            </div>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <section class="section active" id="section-dashboard">
+      <div class="welcome-hero">
+        <div class="hero-content">
+          <h2 class="hero-title">Welcome to <span class="gradient-text">MathGenius AI</span></h2>
+          <p class="hero-desc">Your intelligent math learning companion. Explore graphs, solve equations, practice problems, and track your growth — all powered by AI-driven insights.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="navigateTo('practice-zone')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 3l14 9-14 9V3z"/></svg>
+              Start Practicing
+            </button>
+            <button class="btn btn-ghost" onclick="navigateTo('ai-tutor')">
+              Ask AI Tutor
+            </button>
+          </div>
+        </div>
+        <div class="hero-illustration">
+          <div class="floating-card">
+            <div class="float-formula">∫ f(x) dx</div>
+            <div class="float-label">Calculus</div>
+          </div>
+          <div class="floating-card fc2">
+            <div class="float-formula">ax² + bx + c</div>
+            <div class="float-label">Quadratic</div>
+          </div>
+          <div class="floating-card fc3">
+            <div class="float-formula">y = sin(x)</div>
+            <div class="float-label">Trigonometry</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card" id="statSolved">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-value" id="statSolvedNum">0</div>
+            <div class="stat-label">Problems Solved</div>
+          </div>
+          <div class="stat-trend positive" id="statSolvedTrend">+0 today</div>
+        </div>
+        <div class="stat-card" id="statAccuracy">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#10b981,#059669)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-value" id="statAccuracyNum">0%</div>
+            <div class="stat-label">Accuracy Rate</div>
+          </div>
+          <div class="stat-trend" id="statAccuracyTrend">No data yet</div>
+        </div>
+        <div class="stat-card" id="statStreak">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">
+            <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-value" id="statStreakNum">0</div>
+            <div class="stat-label">Current Streak</div>
+          </div>
+          <div class="stat-trend" id="statStreakBest">Best: 0</div>
+        </div>
+        <div class="stat-card" id="statLevel">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#ec4899,#db2777)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-value" id="statLevelNum">1</div>
+            <div class="stat-label">Current Level</div>
+          </div>
+          <div class="stat-trend" id="statLevelName">Beginner</div>
+        </div>
+      </div>
+
+      <div id="smartInsightsContainer" style="margin-top: 2rem;"></div>
+
+      <div class="section-header">
+        <h3 class="section-title">Quick Actions</h3>
+      </div>
+      <div class="quick-actions-grid">
+        <div class="quick-card" onclick="navigateTo('graph-lab')">
+          <div class="qc-icon" style="background:linear-gradient(135deg,#6366f1,#4f46e5)">📈</div>
+          <div class="qc-title">Graph Lab</div>
+          <div class="qc-desc">Plot and explore 5 graph types interactively</div>
+          <div class="qc-arrow">→</div>
+        </div>
+        <div class="quick-card" onclick="navigateTo('equation-solver')">
+          <div class="qc-icon" style="background:linear-gradient(135deg,#10b981,#059669)">∑</div>
+          <div class="qc-title">Equation Solver</div>
+          <div class="qc-desc">Step-by-step solutions with AI explanations</div>
+          <div class="qc-arrow">→</div>
+        </div>
+        <div class="quick-card" onclick="navigateTo('ai-tutor')">
+          <div class="qc-icon" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)">🤖</div>
+          <div class="qc-title">AI Tutor</div>
+          <div class="qc-desc">Get instant help and explanations from AI</div>
+          <div class="qc-arrow">→</div>
+        </div>
+        <div class="quick-card" onclick="navigateTo('calculators')">
+          <div class="qc-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">🔢</div>
+          <div class="qc-title">Smart Calculators</div>
+          <div class="qc-desc">Budget, EMI, savings, and more tools</div>
+          <div class="qc-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="two-col-grid">
+        <div class="card">
+          <div class="card-header"><h3 class="card-title">Recent Activity</h3></div>
+          <div class="activity-list" id="recentActivity">
+            <div class="empty-state">
+              <div class="empty-icon">📋</div>
+              <p>No activity yet. Start practicing!</p>
+              <button class="btn btn-sm btn-primary" onclick="navigateTo('practice-zone')">Start Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3 class="card-title">Achievements</h3></div>
+          <div class="achievements-mini" id="dashboardAchievements">
+            <div class="skeleton-list">
+              <div class="skeleton-item"></div>
+              <div class="skeleton-item"></div>
+              <div class="skeleton-item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section-graph-lab">
+      <div class="graph-lab-layout">
+        <div class="graph-controls card">
+          <div class="card-header">
+            <h3 class="card-title">Graph Type</h3>
+          </div>
+          <div class="graph-type-tabs">
+            <button class="graph-tab active" data-graph="linear" id="gTab-linear">y = mx + b</button>
+            <button class="graph-tab" data-graph="quadratic" id="gTab-quadratic">y = ax² + bx + c</button>
+            <button class="graph-tab" data-graph="cubic" id="gTab-cubic">y = x³</button>
+            <button class="graph-tab" data-graph="trig" id="gTab-trig">y = sin(x)</button>
+            <button class="graph-tab" data-graph="exponential" id="gTab-exponential">y = 2ˣ</button>
+          </div>
+
+          <div class="param-section" id="graphParams">
+          </div>
+
+          <button class="btn btn-primary btn-full" id="plotGraphBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-8"/></svg>
+            Plot Graph
+          </button>
+
+          <div class="key-points-panel" id="keyPointsPanel">
+            <div class="kp-header">Key Points</div>
+            <div class="kp-list" id="keyPointsList"></div>
+          </div>
+
+          <div class="graph-equation-display" id="graphEquationDisplay"></div>
+        </div>
+
+        <div class="graph-canvas-wrap card">
+          <div class="graph-canvas-header">
+            <h3 class="card-title" id="graphCanvasTitle">Graph Preview</h3>
+            <div class="graph-canvas-actions">
+              <button class="btn btn-sm btn-ghost" id="graphCycleBtn" title="Auto Animate Parameters">🍿 Auto-Play</button>
+              <button class="btn btn-sm btn-ghost" id="graphResetBtn">Reset</button>
+              <button class="btn btn-sm btn-ghost" id="graphAnimBtn">Animate</button>
+            </div>
+          </div>
+          <div class="canvas-container">
+            <canvas id="graphCanvas"></canvas>
+            <div class="canvas-placeholder" id="canvasPlaceholder">
+              <div class="placeholder-icon">📊</div>
+              <p>Select a graph type and click <strong>Plot Graph</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section-equation-solver">
+      <div class="solver-layout">
+        <div class="solver-input-panel card">
+          <div class="card-header"><h3 class="card-title">Equation Type</h3></div>
+          <div class="solver-tabs">
+            <button class="solver-tab active" data-solver="linear">Linear</button>
+            <button class="solver-tab" data-solver="quadratic">Quadratic</button>
+            <button class="solver-tab" data-solver="system">System</button>
+            <button class="solver-tab" data-solver="cubic">Cubic</button>
+            <button class="solver-tab" data-solver="percentage">Percentage</button>
+          </div>
+          <div class="solver-inputs" id="solverInputs">
+          </div>
+          <div class="solver-actions">
+            <button class="btn btn-primary btn-full" id="solveBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M9 11l3 3L22 4"/></svg>
+              Solve Step by Step
+            </button>
+            <button class="btn btn-ghost btn-full" id="visualizeEqBtn" style="display:none">
+              📈 Visualize on Graph
+            </button>
+          </div>
+        </div>
+
+        <div class="solver-output-panel">
+          <div class="card solver-result-card" id="solverResult" style="display:none">
+            <div class="card-header">
+              <h3 class="card-title">Solution</h3>
+              <div class="result-badge" id="resultBadge"></div>
+            </div>
+            <div class="steps-container" id="stepsContainer"></div>
+          </div>
+          <div class="solver-placeholder card" id="solverPlaceholder">
+            <div class="placeholder-icon">🔢</div>
+            <h3>Ready to Solve</h3>
+            <p>Enter your equation values and click "Solve Step by Step" to see a detailed AI-powered solution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section-ai-tutor">
+      <div class="tutor-layout">
+        <div class="tutor-chat-panel card">
+          <div class="tutor-chat-header">
+            <div class="tutor-avatar-wrap">
+              <div class="tutor-avatar">🤖</div>
+              <div class="tutor-status-dot"></div>
+            </div>
+            <div>
+              <div class="tutor-name">MathGenius AI</div>
+              <div class="tutor-status">Online — Always ready to help</div>
+            </div>
+            <button class="btn btn-sm btn-ghost" id="clearChatBtn">Clear</button>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+          </div>
+          <div class="chat-input-area">
+            <div class="quick-suggestions" id="quickSuggestions">
+              <button class="suggestion-chip" data-msg="Explain quadratic equations">Quadratic equations</button>
+              <button class="suggestion-chip" data-msg="How to solve linear equations?">Linear equations</button>
+              <button class="suggestion-chip" data-msg="Explain trigonometry basics">Trigonometry</button>
+              <button class="suggestion-chip" data-msg="What is the Pythagorean theorem?">Pythagorean theorem</button>
+              <button class="suggestion-chip" data-msg="Help me with percentages">Percentages</button>
+              <button class="suggestion-chip" data-msg="Explain calculus derivatives">Derivatives</button>
+            </div>
+            <div class="chat-input-row">
+              <input type="text" class="chat-input" id="chatInput" placeholder="Ask me anything about math..." autocomplete="off" />
+              <button class="chat-send-btn" id="chatSendBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tutor-sidebar">
+          <div class="card tutor-tips-card">
+            <div class="card-header"><h3 class="card-title">💡 Math Tips</h3></div>
+            <div class="tips-list" id="tutorTipsList"></div>
+          </div>
+          <div class="card tutor-stats-card">
+            <div class="card-header"><h3 class="card-title">Session Stats</h3></div>
+            <div class="tutor-session-stats">
+              <div class="tss-item">
+                <span class="tss-label">Messages</span>
+                <span class="tss-val" id="tutorMsgCount">0</span>
+              </div>
+              <div class="tss-item">
+                <span class="tss-label">Topics Covered</span>
+                <span class="tss-val" id="tutorTopicsCount">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section-practice-zone">
+      <div class="practice-mode-screen" id="practiceModeScreen">
+        <div class="practice-hero">
+          <h2 class="section-title">Practice Zone</h2>
+          <p class="section-desc">Sharpen your skills with adaptive quizzes and timed challenges.</p>
+        </div>
+        <div class="mode-cards-grid">
+          <div class="mode-card" id="modeQuickQuiz">
+            <div class="mode-card-icon">⚡</div>
+            <div class="mode-card-title">Quick Quiz</div>
+            <div class="mode-card-desc">10 questions, no time limit. Focus on learning.</div>
+            <div class="mode-settings">
+              <label>Category:</label>
+              <select id="quickCategory" class="styled-select">
+                <option value="all">All Topics</option>
+                <option value="arithmetic">Arithmetic</option>
+                <option value="algebra">Algebra</option>
+                <option value="geometry">Geometry</option>
+                <option value="trigonometry">Trigonometry</option>
+              </select>
+              <label>Difficulty:</label>
+              <select id="quickDifficulty" class="styled-select">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="adaptive">Adaptive</option>
+              </select>
+            </div>
+            <button class="btn btn-primary btn-full" id="startQuickQuiz">Start Quiz</button>
+          </div>
+          <div class="mode-card mode-card-featured" id="modeTimedChallenge">
+            <div class="mode-card-badge">🔥 Popular</div>
+            <div class="mode-card-icon">⏱️</div>
+            <div class="mode-card-title">Timed Challenge</div>
+            <div class="mode-card-desc">15 questions in 5 minutes. Beat the clock!</div>
+            <div class="mode-settings">
+              <label>Category:</label>
+              <select id="timedCategory" class="styled-select">
+                <option value="all">All Topics</option>
+                <option value="arithmetic">Arithmetic</option>
+                <option value="algebra">Algebra</option>
+                <option value="geometry">Geometry</option>
+              </select>
+            </div>
+            <button class="btn btn-primary btn-full" id="startTimedChallenge">Begin Challenge</button>
+          </div>
+        </div>
+        </div>
+        <div class="mode-cards-grid" style="margin-top: 1.5rem">
+          <div class="mode-card mode-card-story" id="modeRealLife" style="grid-column: 1 / -1; display: flex; flex-direction: row; align-items: center; text-align: left;">
+            <div class="mode-card-icon" style="font-size: 3.5rem; margin-right: 1.5rem;">💼</div>
+            <div style="flex: 1;">
+              <div class="mode-card-title" style="text-align: left; font-size: 1.25rem;">Real-Life Math Simulator</div>
+              <div class="mode-card-desc" style="text-align: left; margin-top: 0.5rem;">Solve practical, story-based problems about loans, budgeting, and discounts as if you were living them.</div>
+            </div>
+            <button class="btn btn-primary" id="startRealLifeMath" style="padding: 0.8rem 2rem;">Start Simulator</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-screen" id="quizScreen" style="display:none">
+        <div class="quiz-header">
+          <div class="quiz-meta">
+            <span class="quiz-category-tag" id="quizCategoryTag">Algebra</span>
+            <span class="quiz-difficulty-tag" id="quizDifficultyTag">Medium</span>
+          </div>
+          <div class="quiz-progress-info">
+            <span id="quizProgressText">Question 1 of 10</span>
+            <div class="quiz-timer-wrap" id="quizTimerWrap" style="display:none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span id="quizTimer">5:00</span>
+            </div>
+          </div>
+          <button class="btn btn-sm btn-ghost" id="quitQuizBtn">Quit</button>
+        </div>
+        <div class="quiz-progress-bar-wrap">
+          <div class="quiz-progress-bar" id="quizProgressBar" style="width:0%"></div>
+        </div>
+        <div class="quiz-score-row">
+          <div class="score-chip">Score: <strong id="quizScore">0</strong></div>
+          <div class="streak-chip">🔥 Streak: <strong id="quizStreak">0</strong></div>
+          <div class="points-chip">✦ <strong id="quizPoints">0</strong> pts</div>
+        </div>
+        <div class="question-card card" id="questionCard">
+          <div class="question-topic" id="questionTopic">Topic</div>
+          <div class="question-text" id="questionText">Loading question...</div>
+          <div class="options-grid" id="optionsGrid"></div>
+          <button class="btn btn-ghost btn-sm" id="hintBtn">💡 Show Hint</button>
+          <div class="hint-text" id="hintText" style="display:none"></div>
+        </div>
+        <div class="feedback-card" id="feedbackCard" style="display:none">
+          <div class="feedback-icon" id="feedbackIcon"></div>
+          <div class="feedback-text" id="feedbackText"></div>
+          <div class="feedback-explanation" id="feedbackExplanation"></div>
+          <button class="btn btn-ghost btn-full" id="explainMistakeBtn" style="display:none; margin: 0.75rem 0; border: 2px solid var(--danger); color: var(--danger); font-weight: bold; background: var(--danger-light);">🤖 Explain My Mistake</button>
+          <div class="ai-mistake-breakdown" id="aiMistakeBreakdown" style="display:none; text-align: left; width: 100%; border-top: 1px dashed var(--border); padding-top: 0.75rem; margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;"></div>
+          <button class="btn btn-primary" id="nextQuestionBtn" style="margin-top: 0.5rem">Next Question →</button>
+        </div>
+      </div>
+
+      <div class="results-screen card" id="resultsScreen" style="display:none">
+        <div class="results-header">
+          <div class="results-trophy" id="resultsTrophy">🏆</div>
+          <h2 class="results-title" id="resultsTitle">Quiz Complete!</h2>
+          <p class="results-subtitle" id="resultsSubtitle">Here's how you did:</p>
+        </div>
+        <div class="results-stats-grid">
+          <div class="result-stat"><div class="rs-val" id="rsScore">0</div><div class="rs-label">Score</div></div>
+          <div class="result-stat"><div class="rs-val" id="rsAccuracy">0%</div><div class="rs-label">Accuracy</div></div>
+          <div class="result-stat"><div class="rs-val" id="rsPoints">0</div><div class="rs-label">Points Earned</div></div>
+          <div class="result-stat"><div class="rs-val" id="rsStreak">0</div><div class="rs-label">Best Streak</div></div>
+        </div>
+        <div class="results-bar-wrap">
+          <div class="results-bar-fill" id="resultsBarFill" style="width:0%"></div>
+        </div>
+        <div class="results-feedback" id="resultsFeedback"></div>
+        <div class="results-actions">
+          <button class="btn btn-primary" id="playAgainBtn">Play Again</button>
+          <button class="btn btn-ghost" onclick="navigateTo('performance')">View Performance</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section-calculators">
+      <div class="calc-tabs-row">
+        <button class="calc-tab active" data-calc="budget" id="calcTab-budget">💰 Budget Planner</button>
+        <button class="calc-tab" data-calc="emi" id="calcTab-emi">🏦 EMI Calculator</button>
+        <button class="calc-tab" data-calc="savings" id="calcTab-savings">🎯 Savings Goal</button>
+        <button class="calc-tab" data-calc="discount" id="calcTab-discount">🏷️ Discount</button>
+        <button class="calc-tab" data-calc="study" id="calcTab-study">📅 Study Planner</button>
+      </div>
+
+      <div class="calc-panel active" id="calc-budget">
+        <div class="calc-layout">
+          <div class="card calc-form-card">
+            <div class="card-header"><h3 class="card-title">💰 Budget Planner</h3><p class="card-desc">Track income vs expenses with smart insights</p></div>
+            <div class="form-group">
+              <label class="form-label">Monthly Income (₹)</label>
+              <input type="number" class="form-input" id="budgetIncome" placeholder="e.g., 50000" />
+            </div>
+            <div class="form-label expenses-header">Monthly Expenses</div>
+            <div class="expense-rows" id="expenseRows">
+              <div class="expense-row"><input type="text" class="form-input exp-name" placeholder="e.g., Rent" /><input type="number" class="form-input exp-amt" placeholder="Amount" /><button class="btn-remove-exp">✕</button></div>
+              <div class="expense-row"><input type="text" class="form-input exp-name" placeholder="e.g., Food" /><input type="number" class="form-input exp-amt" placeholder="Amount" /><button class="btn-remove-exp">✕</button></div>
+              <div class="expense-row"><input type="text" class="form-input exp-name" placeholder="e.g., Transport" /><input type="number" class="form-input exp-amt" placeholder="Amount" /><button class="btn-remove-exp">✕</button></div>
+            </div>
+            <button class="btn btn-ghost btn-sm" id="addExpenseRow">+ Add Expense</button>
+            <button class="btn btn-primary btn-full" id="calcBudgetBtn" style="margin-top:1rem">Analyze Budget</button>
+          </div>
+          <div class="card calc-result-card" id="budgetResult" style="display:none">
+            <div class="card-header"><h3 class="card-title">Budget Analysis</h3></div>
+            <div id="budgetResultContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel" id="calc-emi">
+        <div class="calc-layout">
+          <div class="card calc-form-card">
+            <div class="card-header"><h3 class="card-title">🏦 EMI Calculator</h3><p class="card-desc">Calculate monthly EMI and interest breakdown</p></div>
+            <div class="form-group"><label class="form-label">Loan Amount (₹)</label><input type="number" class="form-input" id="emiPrincipal" placeholder="e.g., 500000" /></div>
+            <div class="form-group"><label class="form-label">Annual Interest Rate (%)</label><input type="number" class="form-input" id="emiRate" placeholder="e.g., 8.5" step="0.1" /></div>
+            <div class="form-group"><label class="form-label">Loan Tenure (months)</label><input type="number" class="form-input" id="emiTenure" placeholder="e.g., 60" /></div>
+            <button class="btn btn-primary btn-full" id="calcEmiBtn">Calculate EMI</button>
+          </div>
+          <div class="card calc-result-card" id="emiResult" style="display:none">
+            <div class="card-header"><h3 class="card-title">EMI Breakdown</h3></div>
+            <div id="emiResultContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel" id="calc-savings">
+        <div class="calc-layout">
+          <div class="card calc-form-card">
+            <div class="card-header"><h3 class="card-title">🎯 Savings Goal Tracker</h3><p class="card-desc">Plan your monthly savings to reach any goal</p></div>
+            <div class="form-group"><label class="form-label">Goal Name</label><input type="text" class="form-input" id="savingsGoalName" placeholder="e.g., New Laptop" /></div>
+            <div class="form-group"><label class="form-label">Target Amount (₹)</label><input type="number" class="form-input" id="savingsTarget" placeholder="e.g., 80000" /></div>
+            <div class="form-group"><label class="form-label">Current Savings (₹)</label><input type="number" class="form-input" id="savingsCurrent" placeholder="e.g., 20000" /></div>
+            <div class="form-group"><label class="form-label">Monthly Contribution (₹)</label><input type="number" class="form-input" id="savingsMonthly" placeholder="e.g., 5000" /></div>
+            <div class="form-group"><label class="form-label">Annual Interest Rate (%)</label><input type="number" class="form-input" id="savingsRate" placeholder="e.g., 6" step="0.1" /></div>
+            <button class="btn btn-primary btn-full" id="calcSavingsBtn">Calculate Plan</button>
+          </div>
+          <div class="card calc-result-card" id="savingsResult" style="display:none">
+            <div class="card-header"><h3 class="card-title">Savings Plan</h3></div>
+            <div id="savingsResultContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel" id="calc-discount">
+        <div class="calc-layout">
+          <div class="card calc-form-card">
+            <div class="card-header"><h3 class="card-title">🏷️ Discount Calculator</h3><p class="card-desc">Calculate multi-step discounts and final prices</p></div>
+            <div class="form-group"><label class="form-label">Original Price (₹)</label><input type="number" class="form-input" id="discOriginalPrice" placeholder="e.g., 5000" /></div>
+            <div class="form-group"><label class="form-label">Discount 1 (%)</label><input type="number" class="form-input" id="disc1" placeholder="e.g., 20" step="0.1" /></div>
+            <div class="form-group"><label class="form-label">Discount 2 (%) — Optional</label><input type="number" class="form-input" id="disc2" placeholder="e.g., 10" step="0.1" /></div>
+            <div class="form-group"><label class="form-label">Tax / GST (%)</label><input type="number" class="form-input" id="discTax" placeholder="e.g., 18" step="0.1" /></div>
+            <button class="btn btn-primary btn-full" id="calcDiscountBtn">Calculate Discount</button>
+          </div>
+          <div class="card calc-result-card" id="discountResult" style="display:none">
+            <div class="card-header"><h3 class="card-title">Price Breakdown</h3></div>
+            <div id="discountResultContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel" id="calc-study">
+        <div class="calc-layout">
+          <div class="card calc-form-card">
+            <div class="card-header"><h3 class="card-title">📅 Study Time Optimizer</h3><p class="card-desc">Generate a personalized study schedule</p></div>
+            <div class="form-group"><label class="form-label">Total Study Hours/Day</label><input type="number" class="form-input" id="studyHours" placeholder="e.g., 6" min="1" max="16" /></div>
+            <div class="form-group"><label class="form-label">Exam Date</label><input type="date" class="form-input" id="studyExamDate" /></div>
+            <div class="study-subjects-wrap">
+              <div class="form-label">Subjects & Priority</div>
+              <div class="study-subject-rows" id="studySubjectRows">
+                <div class="study-subject-row"><input type="text" class="form-input subj-name" placeholder="Subject (e.g., Math)" /><select class="styled-select subj-priority"><option value="3">High</option><option value="2">Medium</option><option value="1">Low</option></select></div>
+                <div class="study-subject-row"><input type="text" class="form-input subj-name" placeholder="Subject (e.g., Physics)" /><select class="styled-select subj-priority"><option value="3">High</option><option value="2" selected>Medium</option><option value="1">Low</option></select></div>
+                <div class="study-subject-row"><input type="text" class="form-input subj-name" placeholder="Subject (e.g., Chemistry)" /><select class="styled-select subj-priority"><option value="3">High</option><option value="2">Medium</option><option value="1" selected>Low</option></select></div>
+              </div>
+              <button class="btn btn-ghost btn-sm" id="addSubjectRow">+ Add Subject</button>
+            </div>
+            <button class="btn btn-primary btn-full" id="calcStudyBtn" style="margin-top:1rem">Generate Schedule</button>
+          </div>
+          <div class="card calc-result-card" id="studyResult" style="display:none">
+            <div class="card-header"><h3 class="card-title">Study Schedule</h3></div>
+            <div id="studyResultContent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section-performance">
+      <div class="perf-overview-grid">
+        <div class="card perf-big-stat">
+          <div class="big-stat-inner">
+            <div class="circular-progress" id="accuracyCircle">
+              <svg viewBox="0 0 120 120">
+                <circle class="cp-bg" cx="60" cy="60" r="52"/>
+                <circle class="cp-fill" cx="60" cy="60" r="52" id="accuracyCircleFill"/>
+              </svg>
+              <div class="cp-text">
+                <div class="cp-val" id="perfAccuracyVal">0%</div>
+                <div class="cp-label">Accuracy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="perf-stats-col">
+          <div class="card perf-mini-stat"><div class="pms-icon">📝</div><div class="pms-info"><div class="pms-val" id="perfTotalSolved">0</div><div class="pms-label">Total Solved</div></div></div>
+          <div class="card perf-mini-stat"><div class="pms-icon">🔥</div><div class="pms-info"><div class="pms-val" id="perfBestStreak">0</div><div class="pms-label">Best Streak</div></div></div>
+          <div class="card perf-mini-stat"><div class="pms-icon">✦</div><div class="pms-info"><div class="pms-val" id="perfTotalXP">0</div><div class="pms-label">Total XP</div></div></div>
+          <div class="card perf-mini-stat"><div class="pms-icon">⏱️</div><div class="pms-info"><div class="pms-val" id="perfTimeSpent">0m</div><div class="pms-label">Time Spent</div></div></div>
+        </div>
+      </div>
+
+      <div class="two-col-grid">
+        <div class="card">
+          <div class="card-header"><h3 class="card-title">Topic Breakdown</h3></div>
+          <div class="topic-bars" id="topicBars">
+            <div class="empty-state"><div class="empty-icon">📊</div><p>Solve some problems to see topic breakdown!</p></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3 class="card-title">All Achievements</h3></div>
+          <div class="achievements-full-grid" id="achievementsFull"></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1.5rem">
+        <div class="card-header"><h3 class="card-title">Activity Log</h3></div>
+        <div class="activity-log" id="activityLog">
+          <div class="empty-state"><div class="empty-icon">📋</div><p>No activity yet. Start practicing to see your log!</p></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1.5rem; border-color: rgba(239, 68, 68, 0.2); background: rgba(239, 68, 68, 0.05);">
+        <div class="card-header"><h3 class="card-title" style="color: var(--danger);">Reset Progress</h3></div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Start fresh by clearing all your progress, achievements, and data.</p>
+        <button class="btn btn-danger" id="resetProgressBtn" onclick="showResetConfirmation()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
+          Reset All Progress
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <div class="modal-overlay" id="achievementModal" style="display:none">
+    <div class="modal achievement-modal">
+      <div class="ach-modal-glow"></div>
+      <div class="ach-modal-icon" id="achModalIcon">🏆</div>
+      <div class="ach-modal-label">Achievement Unlocked!</div>
+      <div class="ach-modal-name" id="achModalName">First Step</div>
+      <div class="ach-modal-desc" id="achModalDesc">Answer your first question correctly</div>
+      <div class="ach-modal-points" id="achModalPoints">+50 XP</div>
+      <button class="btn btn-primary" id="achModalClose">Awesome! 🎉</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="levelUpModal" style="display:none">
+    <div class="modal levelup-modal">
+      <div class="levelup-particles" id="levelupParticles"></div>
+      <div class="levelup-icon">⬆️</div>
+      <div class="levelup-label">Level Up!</div>
+      <div class="levelup-name" id="levelupName">Scholar</div>
+      <div class="levelup-desc" id="levelupDesc">You've reached a new level!</div>
+      <button class="btn btn-primary" id="levelUpClose">Let's Go! 🚀</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="resetConfirmModal" style="display:none">
+    <div class="modal reset-confirm-modal">
+      <div class="reset-modal-icon">⚠️</div>
+      <div class="reset-modal-title">Reset Progress?</div>
+      <div class="reset-modal-desc">This will permanently delete all your progress, XP, achievements, scores, and streaks. This action cannot be undone.</div>
+      <div class="reset-modal-actions">
+        <button class="btn btn-ghost" id="resetCancelBtn">Cancel</button>
+        <button class="btn btn-danger" id="resetConfirmBtn">Yes, Reset Everything</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="voice-fab" id="voiceFab" aria-label="Voice Input">
+    <span class="voice-fab-icon">🎤</span>
+    <div class="voice-pulse" id="voicePulse"></div>
+  </button>
+  <div class="voice-status-tooltip" id="voiceStatusTooltip">Press to speak</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

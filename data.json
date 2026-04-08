@@ -1,0 +1,253 @@
+{
+  "practiceQuestions": {
+    "arithmetic": {
+      "easy": [
+        { "id": "arith_e1", "question": "Calculate: 248 + 176", "options": ["414", "424", "422", "412"], "answer": "424", "explanation": "Add hundreds: 200+100=300, tens: 40+70=110, ones: 8+6=14. Total: 300+110+14=424", "hint": "Break numbers into hundreds, tens, and ones", "points": 10, "topic": "Addition" },
+        { "id": "arith_e2", "question": "What is 15% of 200?", "options": ["25", "30", "35", "20"], "answer": "30", "explanation": "15% of 200 = (15/100) × 200 = 0.15 × 200 = 30", "hint": "Convert percentage to decimal: 15% = 0.15", "points": 10, "topic": "Percentage" },
+        { "id": "arith_e3", "question": "Simplify: 72 ÷ 8 × 3", "options": ["27", "3", "24", "18"], "answer": "27", "explanation": "Follow BODMAS: Division first: 72÷8=9, then multiply: 9×3=27", "hint": "Remember BODMAS: Division before Multiplication (left to right)", "points": 10, "topic": "BODMAS" },
+        { "id": "arith_e4", "question": "What is √144?", "options": ["11", "12", "13", "14"], "answer": "12", "explanation": "12 × 12 = 144, so √144 = 12", "hint": "Think: what number multiplied by itself gives 144?", "points": 10, "topic": "Square Roots" },
+        { "id": "arith_e5", "question": "What is 2⁵?", "options": ["10", "16", "32", "64"], "answer": "32", "explanation": "2⁵ = 2×2×2×2×2 = 32", "hint": "Multiply 2 by itself 5 times", "points": 10, "topic": "Powers" },
+        { "id": "arith_e6", "question": "What is the LCM of 4 and 6?", "options": ["12", "24", "8", "6"], "answer": "12", "explanation": "Multiples of 4: 4,8,12... Multiples of 6: 6,12... LCM = 12", "hint": "Find the smallest number divisible by both 4 and 6", "points": 10, "topic": "LCM" },
+        { "id": "arith_e7", "question": "Calculate: 1000 - 375", "options": ["615", "625", "635", "645"], "answer": "625", "explanation": "1000 - 375 = 625. Verify: 625 + 375 = 1000 ✓", "hint": "Try: 1000 - 400 = 600, then add back 25", "points": 10, "topic": "Subtraction" },
+        { "id": "arith_e8", "question": "What is the HCF of 18 and 24?", "options": ["3", "6", "9", "12"], "answer": "6", "explanation": "Factors of 18: 1,2,3,6,9,18. Factors of 24: 1,2,3,4,6,8,12,24. HCF = 6", "hint": "Find common factors and pick the highest one", "points": 10, "topic": "HCF" },
+        { "id": "arith_e9", "question": "If a dozen eggs costs ₹48, what is the cost of 5 eggs?", "options": ["₹18", "₹20", "₹22", "₹24"], "answer": "₹20", "explanation": "1 dozen = 12 eggs. Price per egg = 48/12 = ₹4. 5 eggs = 5×4 = ₹20", "hint": "Find cost per egg first", "points": 10, "topic": "Unitary Method" },
+        { "id": "arith_e10", "question": "Round 4.567 to 2 decimal places", "options": ["4.56", "4.57", "4.6", "4.5"], "answer": "4.57", "explanation": "The third decimal is 7 ≥ 5, so round up: 4.567 → 4.57", "hint": "Look at the third decimal digit to decide whether to round up or down", "points": 10, "topic": "Rounding" }
+      ],
+      "medium": [
+        { "id": "arith_m1", "question": "A train travels 360 km in 4 hours. What is its speed?", "options": ["80 km/h", "90 km/h", "95 km/h", "100 km/h"], "answer": "90 km/h", "explanation": "Speed = Distance/Time = 360/4 = 90 km/h", "hint": "Speed = Distance ÷ Time", "points": 20, "topic": "Speed" },
+        { "id": "arith_m2", "question": "What is 35% of 520?", "options": ["172", "180", "182", "185"], "answer": "182", "explanation": "35% of 520 = (35/100) × 520 = 0.35 × 520 = 182", "hint": "10% of 520 = 52, so 35% = 3.5 × 52", "points": 20, "topic": "Percentage" },
+        { "id": "arith_m3", "question": "Compound interest at 10% for 2 years on ₹1000?", "options": ["₹1200", "₹1210", "₹1220", "₹1100"], "answer": "₹1210", "explanation": "Year 1: 1000 × 1.1 = 1100. Year 2: 1100 × 1.1 = 1210", "hint": "Apply interest each year on the new total", "points": 20, "topic": "Compound Interest" },
+        { "id": "arith_m4", "question": "3:5 ratio split of 640. Find larger share.", "options": ["240", "380", "400", "320"], "answer": "400", "explanation": "Total parts = 3+5=8. Larger (5 parts): (5/8)×640 = 400", "hint": "Divide by total ratio parts first", "points": 20, "topic": "Ratio" },
+        { "id": "arith_m5", "question": "A shopkeeper buys for ₹800 and sells for ₹1000. Profit %?", "options": ["20%", "25%", "15%", "10%"], "answer": "25%", "explanation": "Profit = 1000-800 = 200. Profit% = (200/800)×100 = 25%", "hint": "Profit% = (Profit/Cost Price) × 100", "points": 20, "topic": "Profit & Loss" },
+        { "id": "arith_m6", "question": "Sum of first 20 natural numbers?", "options": ["200", "210", "190", "220"], "answer": "210", "explanation": "Sum = n(n+1)/2 = 20×21/2 = 210", "hint": "Use formula: n(n+1)/2", "points": 20, "topic": "Series" },
+        { "id": "arith_m7", "question": "8 workers complete a job in 12 days. How many days for 6 workers?", "options": ["14 days", "16 days", "18 days", "20 days"], "answer": "16 days", "explanation": "Total work = 8×12 = 96 person-days. For 6 workers: 96/6 = 16 days", "hint": "Total work stays constant: workers × days = constant", "points": 20, "topic": "Work" },
+        { "id": "arith_m8", "question": "Simple interest on ₹5000 at 8% per annum for 3 years?", "options": ["₹1000", "₹1200", "₹1500", "₹800"], "answer": "₹1200", "explanation": "SI = (P × R × T)/100 = (5000 × 8 × 3)/100 = ₹1200", "hint": "SI = PRT/100", "points": 20, "topic": "Simple Interest" }
+      ],
+      "hard": [
+        { "id": "arith_h1", "question": "A fill pipe fills a tank in 6h. A drain empties in 8h. Both open together — how long to fill?", "options": ["20 hours", "24 hours", "22 hours", "18 hours"], "answer": "24 hours", "explanation": "Fill rate: 1/6/hr. Drain: 1/8/hr. Net: 1/6-1/8 = 1/24. Time = 24 hours", "hint": "Net rate = fill rate - drain rate", "points": 30, "topic": "Pipes & Cisterns" },
+        { "id": "arith_h2", "question": "HCF=12, LCM=240. One number is 48. Find the other.", "options": ["60", "72", "80", "96"], "answer": "60", "explanation": "Product = HCF × LCM = 12 × 240 = 2880. Other = 2880/48 = 60", "hint": "a × b = HCF × LCM", "points": 30, "topic": "HCF & LCM" },
+        { "id": "arith_h3", "question": "₹2000 invested at 15% per annum for 2 years compounded annually. What is compound interest?", "options": ["₹645", "₹600", "₹660", "₹630"], "answer": "₹645", "explanation": "A = 2000×(1.15)² = 2000×1.3225 = 2645. CI = 2645-2000 = ₹645", "hint": "A = P(1+r)^t, CI = A - P", "points": 30, "topic": "Compound Interest" },
+        { "id": "arith_h4", "question": "If 5 workers can build a wall in 12 days, how many extra workers are needed to finish in 4 days?", "options": ["10", "15", "5", "8"], "answer": "10", "explanation": "Total person-days = 5 × 12 = 60. Workers needed for 4 days = 60 / 4 = 15. Extra workers = 15 - 5 = 10.", "hint": "Total work = workers × days. Find total workers needed first.", "points": 30, "topic": "Work Rate" }
+      ]
+    },
+    "algebra": {
+      "easy": [
+        { "id": "alg_e1", "question": "Solve: x + 7 = 15", "options": ["x = 7", "x = 8", "x = 9", "x = 6"], "answer": "x = 8", "explanation": "x + 7 = 15 → x = 15 - 7 = 8", "hint": "Subtract 7 from both sides", "points": 10, "topic": "Linear Equations" },
+        { "id": "alg_e2", "question": "Simplify: 3x + 2x - x", "options": ["4x", "5x", "6x", "3x"], "answer": "4x", "explanation": "3x + 2x - x = (3+2-1)x = 4x", "hint": "Add/subtract coefficients of like terms", "points": 10, "topic": "Simplification" },
+        { "id": "alg_e3", "question": "If f(x) = 2x + 3, find f(4)", "options": ["11", "10", "9", "12"], "answer": "11", "explanation": "f(4) = 2(4) + 3 = 8 + 3 = 11", "hint": "Substitute x = 4 into the function", "points": 10, "topic": "Functions" },
+        { "id": "alg_e4", "question": "Solve: 3x = 21", "options": ["5", "6", "7", "8"], "answer": "7", "explanation": "3x = 21 → x = 21/3 = 7", "hint": "Divide both sides by 3", "points": 10, "topic": "Linear Equations" },
+        { "id": "alg_e5", "question": "Expand: (x + 3)(x + 2)", "options": ["x² + 5x + 5", "x² + 5x + 6", "x² + 6x + 6", "x² + 4x + 6"], "answer": "x² + 5x + 6", "explanation": "(x+3)(x+2) = x² + 2x + 3x + 6 = x² + 5x + 6", "hint": "Use FOIL: First, Outer, Inner, Last", "points": 10, "topic": "Expansion" },
+        { "id": "alg_e6", "question": "What is the slope of y = 4x - 7?", "options": ["7", "-7", "4", "-4"], "answer": "4", "explanation": "In y = mx + b form, m is the slope. Here m = 4", "hint": "The coefficient of x is the slope", "points": 10, "topic": "Linear Functions" },
+        { "id": "alg_e7", "question": "Factor: x² - 9", "options": ["(x+3)(x-3)", "(x+9)(x-1)", "(x-3)²", "(x+3)²"], "answer": "(x+3)(x-3)", "explanation": "x² - 9 = x² - 3² = (x+3)(x-3) — difference of squares", "hint": "a² - b² = (a+b)(a-b)", "points": 10, "topic": "Factoring" },
+        { "id": "alg_e8", "question": "Solve: 2x - 5 = 1", "options": ["x = 2", "x = 3", "x = 4", "x = 6"], "answer": "x = 3", "explanation": "2x - 5 = 1 → 2x = 6 → x = 3", "hint": "Add 5 to both sides, then divide by 2", "points": 10, "topic": "Linear Equations" },
+        { "id": "alg_e9", "question": "What is the y-intercept of y = 3x + 5?", "options": ["3", "5", "-5", "0"], "answer": "5", "explanation": "In y = mx + b, b is the y-intercept. Here b = 5", "hint": "Set x = 0 to find y-intercept", "points": 10, "topic": "Linear Functions" },
+        { "id": "alg_e10", "question": "If 2x + 3y = 12 and x = 3, find y", "options": ["y = 1", "y = 2", "y = 3", "y = 4"], "answer": "y = 2", "explanation": "2(3) + 3y = 12 → 6 + 3y = 12 → 3y = 6 → y = 2", "hint": "Substitute x = 3 and solve for y", "points": 10, "topic": "Systems" }
+      ],
+      "medium": [
+        { "id": "alg_m1", "question": "Solve: x² - 5x + 6 = 0", "options": ["x = 1, 6", "x = 2, 3", "x = -2, -3", "x = -1, 6"], "answer": "x = 2, 3", "explanation": "Factor: (x-2)(x-3) = 0 → x = 2 or x = 3", "hint": "Find two numbers that multiply to 6 and add to -5", "points": 20, "topic": "Quadratic Equations" },
+        { "id": "alg_m2", "question": "Solve: 2x + y = 7, x - y = 2", "options": ["x=3, y=1", "x=2, y=3", "x=4, y=1", "x=3, y=2"], "answer": "x=3, y=1", "explanation": "Add equations: 3x = 9 → x = 3. Then 3 - y = 2 → y = 1", "hint": "Add the two equations to eliminate y", "points": 20, "topic": "Systems of Equations" },
+        { "id": "alg_m3", "question": "Roots of x² - 4x - 5 = 0?", "options": ["x = 5, -1", "x = -5, 1", "x = 4, 1", "x = -4, -1"], "answer": "x = 5, -1", "explanation": "Factor: (x-5)(x+1) = 0 → x = 5 or x = -1", "hint": "Find numbers that multiply to -5 and add to -4", "points": 20, "topic": "Quadratic Equations" },
+        { "id": "alg_m4", "question": "Vertex of y = x² - 6x + 8?", "options": ["(3, -1)", "(3, 1)", "(-3, -1)", "(6, 8)"], "answer": "(3, -1)", "explanation": "Vertex x = -b/2a = 6/2 = 3. y = 9-18+8 = -1. Vertex: (3,-1)", "hint": "x-coordinate of vertex = -b/(2a)", "points": 20, "topic": "Quadratic Functions" },
+        { "id": "alg_m5", "question": "Simplify: (x²y³)² ÷ (xy)²", "options": ["x²y⁴", "x³y⁴", "x²y⁶", "xy³"], "answer": "x²y⁴", "explanation": "(x²y³)² = x⁴y⁶. (xy)² = x²y². Result: x⁴y⁶/x²y² = x²y⁴", "hint": "Apply power rule: (aⁿ)ᵐ = aⁿᵐ", "points": 20, "topic": "Exponents" },
+        { "id": "alg_m6", "question": "If log₁₀(x) = 2, what is x?", "options": ["20", "100", "10", "200"], "answer": "100", "explanation": "log₁₀(x) = 2 means x = 10² = 100", "hint": "log₁₀(x) = 2 → x = 10²", "points": 20, "topic": "Logarithms" },
+        { "id": "alg_m7", "question": "Discriminant of 2x² - 3x + 1?", "options": ["1", "9", "17", "-1"], "answer": "1", "explanation": "D = b² - 4ac = (-3)² - 4(2)(1) = 9 - 8 = 1", "hint": "Discriminant = b² - 4ac", "points": 20, "topic": "Quadratic Equations" },
+        { "id": "alg_m8", "question": "Solve: |2x - 3| = 7", "options": ["x=5 only", "x=-2 only", "x=5 or x=-2", "x=-5 or x=2"], "answer": "x=5 or x=-2", "explanation": "2x-3=7 → x=5, OR 2x-3=-7 → 2x=-4 → x=-2", "hint": "Absolute value creates two cases: + and -", "points": 20, "topic": "Absolute Value" }
+      ],
+      "hard": [
+        { "id": "alg_h1", "question": "Solve: x³ - 6x² + 11x - 6 = 0", "options": ["x = 1, 2, 3", "x = -1, -2, -3", "x = 1, 2, -3", "x = 2, 3, 4"], "answer": "x = 1, 2, 3", "explanation": "Factor: (x-1)(x-2)(x-3) = 0 → x = 1, 2, or 3", "hint": "Try integer roots: ±1, ±2, ±3, ±6", "points": 30, "topic": "Cubic Equations" },
+        { "id": "alg_h2", "question": "If α, β are roots of x² - 5x + 6 = 0, find α² + β²", "options": ["13", "12", "25", "36"], "answer": "13", "explanation": "α+β=5, αβ=6. α²+β²=(α+β)²-2αβ=25-12=13", "hint": "Use α²+β² = (α+β)² - 2αβ", "points": 30, "topic": "Quadratic Roots" },
+        { "id": "alg_h3", "question": "Solve simultaneously: 3x + 2y = 8, x + y = 3", "options": ["x=2, y=1", "x=1, y=2", "x=3, y=0", "x=0, y=4"], "answer": "x=2, y=1", "explanation": "From eq2: x=3-y. Substitute: 3(3-y)+2y=8 → 9-3y+2y=8 → y=1. Then x=2", "hint": "Express x from equation 2, substitute into equation 1", "points": 30, "topic": "Systems of Equations" }
+      ]
+    },
+    "geometry": {
+      "easy": [
+        { "id": "geo_e1", "question": "Area of rectangle: length 8, width 5?", "options": ["26", "40", "13", "32"], "answer": "40", "explanation": "Area = length × width = 8 × 5 = 40", "hint": "Area = l × w", "points": 10, "topic": "Area" },
+        { "id": "geo_e2", "question": "Circumference of circle with radius 7? (π ≈ 3.14)", "options": ["43.96", "44", "153.94", "21.98"], "answer": "43.96", "explanation": "C = 2πr = 2 × 3.14 × 7 = 43.96", "hint": "C = 2πr", "points": 10, "topic": "Circles" },
+        { "id": "geo_e3", "question": "Sum of interior angles in a triangle?", "options": ["90°", "180°", "270°", "360°"], "answer": "180°", "explanation": "Sum of interior angles in any triangle = 180°", "hint": "This is a fundamental theorem", "points": 10, "topic": "Angles" },
+        { "id": "geo_e4", "question": "Volume of cube with side 5?", "options": ["15", "25", "75", "125"], "answer": "125", "explanation": "Volume = side³ = 5³ = 125", "hint": "Volume of cube = s³", "points": 10, "topic": "3D Geometry" },
+        { "id": "geo_e5", "question": "Hypotenuse of right triangle with legs 3 and 4?", "options": ["5", "7", "6", "12"], "answer": "5", "explanation": "h² = 3² + 4² = 9 + 16 = 25 → h = 5 (Pythagorean triple 3-4-5)", "hint": "Use Pythagorean theorem: a² + b² = c²", "points": 10, "topic": "Pythagorean Theorem" }
+      ],
+      "medium": [
+        { "id": "geo_m1", "question": "Area of triangle with base 12 and height 8?", "options": ["48", "96", "40", "36"], "answer": "48", "explanation": "Area = ½ × base × height = ½ × 12 × 8 = 48", "hint": "Area of triangle = ½bh", "points": 20, "topic": "Area" },
+        { "id": "geo_m2", "question": "Area of circle with radius 10? (π ≈ 3.14)", "options": ["314", "62.8", "31.4", "628"], "answer": "314", "explanation": "Area = πr² = 3.14 × 10² = 3.14 × 100 = 314", "hint": "Area = πr²", "points": 20, "topic": "Circles" },
+        { "id": "geo_m3", "question": "In a right triangle, angle A = 30°, hypotenuse = 10. Find side opposite to A.", "options": ["5", "8.66", "10", "5.77"], "answer": "5", "explanation": "sin(30°) = opposite/hypotenuse → opposite = 10 × 0.5 = 5", "hint": "sin(θ) = opposite/hypotenuse", "points": 20, "topic": "Trigonometry" },
+        { "id": "geo_m4", "question": "Volume of sphere with radius 3? (π ≈ 3.14)", "options": ["113.04", "37.68", "75.36", "150.72"], "answer": "113.04", "explanation": "V = (4/3)πr³ = (4/3) × 3.14 × 27 = 113.04", "hint": "V = (4/3)πr³", "points": 20, "topic": "3D Geometry" },
+        { "id": "geo_m5", "question": "Diagonal of a square with side 6?", "options": ["6√2", "6", "12", "8"], "answer": "6√2", "explanation": "Diagonal = s√2 = 6√2 ≈ 8.49", "hint": "Use Pythagorean theorem: d² = s² + s²", "points": 20, "topic": "Pythagorean Theorem" }
+      ],
+      "hard": [
+        { "id": "geo_h1", "question": "Area of equilateral triangle with side 8?", "options": ["16√3", "32", "8√3", "64"], "answer": "16√3", "explanation": "Area = (√3/4)s² = (√3/4) × 64 = 16√3 ≈ 27.7", "hint": "Area = (√3/4)s²", "points": 30, "topic": "Triangles" }
+      ]
+    },
+    "trigonometry": {
+      "medium": [
+        { "id": "trig_m1", "question": "What is sin(90°)?", "options": ["0", "0.5", "1", "√2/2"], "answer": "1", "explanation": "sin(90°) = 1 — maximum value of sine function", "hint": "Think about the unit circle at 90°", "points": 20, "topic": "Basic Trig" },
+        { "id": "trig_m2", "question": "What is cos(0°)?", "options": ["0", "1", "-1", "0.5"], "answer": "1", "explanation": "cos(0°) = 1", "hint": "At angle 0, adjacent equals hypotenuse", "points": 20, "topic": "Basic Trig" },
+        { "id": "trig_m3", "question": "What is tan(45°)?", "options": ["0", "1", "√2", "1/√2"], "answer": "1", "explanation": "tan(45°) = sin(45°)/cos(45°) = 1", "hint": "tan = sin/cos", "points": 20, "topic": "Basic Trig" },
+        { "id": "trig_m4", "question": "Convert 60° to radians", "options": ["π/6", "π/4", "π/3", "π/2"], "answer": "π/3", "explanation": "Radians = degrees × π/180 = 60 × π/180 = π/3", "hint": "Multiply degrees by π/180", "points": 20, "topic": "Angle Conversion" },
+        { "id": "trig_m5", "question": "If sin(θ) = 0.6 and cos(θ) = 0.8, find tan(θ)?", "options": ["0.48", "0.75", "1.33", "0.6"], "answer": "0.75", "explanation": "tan(θ) = sin(θ)/cos(θ) = 0.6/0.8 = 0.75", "hint": "tan = sin/cos", "points": 20, "topic": "Trig Ratios" }
+      ],
+      "hard": [
+        { "id": "trig_h1", "question": "sin²θ + cos²θ = ?", "options": ["0", "1", "2", "sin(2θ)"], "answer": "1", "explanation": "This is the Pythagorean identity: sin²θ + cos²θ = 1", "hint": "This is the most fundamental trigonometric identity", "points": 30, "topic": "Trig Identities" },
+        { "id": "trig_h2", "question": "Period of y = sin(2x)?", "options": ["2π", "π", "π/2", "4π"], "answer": "π", "explanation": "Period of sin(bx) = 2π/b = 2π/2 = π", "hint": "Period formula: T = 2π/b", "points": 30, "topic": "Periodic Functions" }
+      ]
+    },
+    "real_life": {
+      "easy": [
+        { "id": "rl_e1", "question": "A pizza costs ₹500. If you have a coupon for ₹100 off, how much will you pay?", "options": ["₹400", "₹600", "₹500", "₹450"], "answer": "₹400", "explanation": "500 - 100 = 400. Simple subtraction!", "hint": "Subtract the coupon value from the price.", "points": 10, "topic": "Shopping" },
+        { "id": "rl_e2", "question": "You buy 3 notebooks for ₹40 each. What is the total cost?", "options": ["₹120", "₹100", "₹140", "₹80"], "answer": "₹120", "explanation": "3 × 40 = 120.", "hint": "Multiply quantity by price.", "points": 10, "topic": "Daily Math" },
+        { "id": "rl_e3", "question": "You have ₹2000 in your bank. You withdraw ₹800. What is your new balance?", "options": ["₹1200", "₹1000", "₹1400", "₹1800"], "answer": "₹1200", "explanation": "2000 - 800 = 1200.", "hint": "Subtact the withdrawal from the balance.", "points": 10, "topic": "Banking" }
+      ],
+      "medium": [
+        { "id": "rl_m1", "question": "You see a laptop priced at ₹60,000 with a 15% discount. How much will you actually pay?", "options": ["₹51,000", "₹54,000", "₹45,000", "₹58,500"], "answer": "₹51,000", "explanation": "Discount = 15% of 60000 = 0.15 × 60000 = 9000. Final Price = 60000 - 9000 = 51000.", "hint": "Calculate the discount amount first, then subtract it from the total.", "points": 20, "topic": "Shopping Discount" },
+        { "id": "rl_m2", "question": "You earn ₹50,000 a month and follow the 50/30/20 budget rule (Needs/Wants/Savings). How much goes into savings?", "options": ["₹25,000", "₹15,000", "₹10,000", "₹20,000"], "answer": "₹10,000", "explanation": "Savings is 20% of your income. 20% of 50000 = 0.20 × 50000 = 10000.", "hint": "Calculate 20% of the total monthly income.", "points": 20, "topic": "Budgeting" },
+        { "id": "rl_m3", "question": "You are organizing a pizza party for 15 friends. Each friend eats 3 pizza slices. If every pizza has 8 slices, how many full pizzas should you order?", "options": ["5", "6", "4", "7"], "answer": "6", "explanation": "Total slices needed = 15 × 3 = 45. Pizzas needed = 45 ÷ 8 = 5.625. You must round up and buy 6 pizzas.", "hint": "Find the total slices needed, then divide by slices per pizza and round up.", "points": 20, "topic": "Party Planning" }
+      ],
+      "hard": [
+        { "id": "rl_h1", "question": "You took a ₹5,00,000 car loan at 8% annual interest for 5 years. What is the approximate monthly EMI?", "options": ["₹10,138", "₹9,540", "₹11,400", "₹8,333"], "answer": "₹10,138", "explanation": "Using EMI formula: P×R×[(1+r)^n/((1+r)^n-1)]. Here P=500000, r=8/(12×100)=0.00666, n=60. EMI ≈ 10,138.", "hint": "If you don't know the exact formula, eliminating obvious wrong choices (like 500000/60) gets you closer to ~10k.", "points": 40, "topic": "EMI Calculation" },
+        { "id": "rl_h2", "question": "You invest ₹5000 monthly into an index fund returning 12% annually. Roughly how much will you have in 10 years?", "options": ["₹6,00,000", "₹9,50,000", "₹11,60,000", "₹15,00,000"], "answer": "₹11,60,000", "explanation": "This is a SIP calculation. Over 10 years, you invest 6 lakhs. Compounded at 12%, the future value is roughly ₹11,61,695, so ~11.6L.", "hint": "Compound interest will significantly increase the principal of ₹6 lakh over 10 years.", "points": 40, "topic": "Investment Goals" },
+        { "id": "rl_h3", "question": "You want to buy a house in 5 years. If the house costs ₹50 Lakhs today and inflation is 6%, what will it cost in 5 years?", "options": ["₹60 L", "₹67 L", "₹55 L", "₹72 L"], "answer": "₹67 L", "explanation": "Future Cost = Present Cost × (1 + inflation)^years. 50 × (1.06)⁵ ≈ 50 × 1.338 = 66.9. So roughly ₹67 Lakhs.", "hint": "Calculate cumulative inflation: (1.06) to the power of 5.", "points": 40, "topic": "Inflation" }
+      ]
+    }
+  },
+  "achievements": [
+    { "id": "first_correct", "name": "First Step", "description": "Answer your first question correctly", "icon": "🎯", "iconBg": "#6366f1", "points": 50, "condition": { "type": "correctAnswers", "count": 1 } },
+    { "id": "streak_3", "name": "On Fire!", "description": "Get 3 correct answers in a row", "icon": "🔥", "iconBg": "#f59e0b", "points": 75, "condition": { "type": "streak", "count": 3 } },
+    { "id": "streak_5", "name": "Unstoppable", "description": "Get 5 correct answers in a row", "icon": "⚡", "iconBg": "#8b5cf6", "points": 150, "condition": { "type": "streak", "count": 5 } },
+    { "id": "streak_10", "name": "Math Legend", "description": "Get 10 correct answers in a row", "icon": "👑", "iconBg": "#f59e0b", "points": 300, "condition": { "type": "streak", "count": 10 } },
+    { "id": "problems_10", "name": "Getting Started", "description": "Solve 10 problems", "icon": "📚", "iconBg": "#10b981", "points": 100, "condition": { "type": "totalSolved", "count": 10 } },
+    { "id": "problems_50", "name": "Dedicated Learner", "description": "Solve 50 problems", "icon": "🏆", "iconBg": "#f59e0b", "points": 200, "condition": { "type": "totalSolved", "count": 50 } },
+    { "id": "problems_100", "name": "Century Club", "description": "Solve 100 problems", "icon": "💯", "iconBg": "#ec4899", "points": 500, "condition": { "type": "totalSolved", "count": 100 } },
+    { "id": "accuracy_80", "name": "Sharp Mind", "description": "Achieve 80%+ accuracy over 10 questions", "icon": "🎓", "iconBg": "#3b82f6", "points": 150, "condition": { "type": "accuracy", "percent": 80, "minProblems": 10 } },
+    { "id": "accuracy_90", "name": "Genius", "description": "Achieve 90%+ accuracy over 20 questions", "icon": "🧠", "iconBg": "#6366f1", "points": 300, "condition": { "type": "accuracy", "percent": 90, "minProblems": 20 } },
+    { "id": "graph_explorer", "name": "Graph Explorer", "description": "Plot 5 different graph types", "icon": "📈", "iconBg": "#10b981", "points": 100, "condition": { "type": "graphsPlotted", "count": 5 } },
+    { "id": "equation_master", "name": "Equation Master", "description": "Solve 10 equations", "icon": "∑", "iconBg": "#8b5cf6", "points": 150, "condition": { "type": "equationsSolved", "count": 10 } },
+    { "id": "calculator_pro", "name": "Calculator Pro", "description": "Use all 5 calculator tools", "icon": "🔢", "iconBg": "#06b6d4", "points": 100, "condition": { "type": "calculatorsUsed", "count": 5 } },
+    { "id": "tutor_chat", "name": "Curious Learner", "description": "Send 10 messages to AI Tutor", "icon": "🤖", "iconBg": "#6366f1", "points": 75, "condition": { "type": "tutorMessages", "count": 10 } },
+    { "id": "hard_solver", "name": "Challenge Accepted", "description": "Correctly answer 5 hard questions", "icon": "💪", "iconBg": "#ef4444", "points": 200, "condition": { "type": "hardCorrect", "count": 5 } },
+    { "id": "daily_login", "name": "Consistent", "description": "Use MathGenius AI 3 days in a row", "icon": "📅", "iconBg": "#10b981", "points": 100, "condition": { "type": "dailyStreak", "count": 3 } },
+    { "id": "no_mistake", "name": "Flawless Setup", "description": "Solve 15 problems without a single mistake", "icon": "🛡️", "iconBg": "#3b82f6", "points": 300, "condition": { "type": "streak", "count": 15 } },
+    { "id": "graph_master", "name": "Graph Master", "description": "Play Graph Animations 10 times", "icon": "🎥", "iconBg": "#8b5cf6", "points": 150, "condition": { "type": "graphsAnimated", "count": 10 } },
+    { "id": "voice_expert", "name": "Voice Command", "description": "Solve an equation using your Voice", "icon": "🎤", "iconBg": "#ec4899", "points": 100, "condition": { "type": "voiceUsed", "count": 1 } }
+  ],
+  "levels": [
+    { "level": 1, "name": "Beginner", "minXP": 0, "maxXP": 200, "color": "#6b7280" },
+    { "level": 2, "name": "Apprentice", "minXP": 200, "maxXP": 500, "color": "#10b981" },
+    { "level": 3, "name": "Student", "minXP": 500, "maxXP": 1000, "color": "#3b82f6" },
+    { "level": 4, "name": "Scholar", "minXP": 1000, "maxXP": 1800, "color": "#8b5cf6" },
+    { "level": 5, "name": "Expert", "minXP": 1800, "maxXP": 3000, "color": "#f59e0b" },
+    { "level": 6, "name": "Master", "minXP": 3000, "maxXP": 5000, "color": "#ef4444" },
+    { "level": 7, "name": "Genius", "minXP": 5000, "maxXP": 8000, "color": "#ec4899" },
+    { "level": 8, "name": "Legend", "minXP": 8000, "maxXP": 99999, "color": "#f59e0b" }
+  ],
+  "graphTypes": [
+    {
+      "id": "linear",
+      "name": "Linear",
+      "formula": "y = mx + b",
+      "description": "Linear equation graph",
+      "parameters": [
+        { "name": "m", "label": "Slope (m)", "type": "number", "default": 2, "min": -10, "max": 10, "step": 0.1 },
+        { "name": "b", "label": "Y-intercept (b)", "type": "number", "default": 1, "min": -10, "max": 10, "step": 0.1 }
+      ],
+      "color": "#6366f1"
+    },
+    {
+      "id": "quadratic",
+      "name": "Quadratic",
+      "formula": "y = ax² + bx + c",
+      "description": "Quadratic equation graph",
+      "parameters": [
+        { "name": "a", "label": "Coefficient a", "type": "number", "default": 1, "min": -5, "max": 5, "step": 0.1 },
+        { "name": "b", "label": "Coefficient b", "type": "number", "default": 0, "min": -10, "max": 10, "step": 0.1 },
+        { "name": "c", "label": "Constant c", "type": "number", "default": 0, "min": -10, "max": 10, "step": 0.1 }
+      ],
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "cubic",
+      "name": "Cubic",
+      "formula": "y = x³",
+      "description": "Cubic equation graph",
+      "parameters": [
+        { "name": "scale", "label": "Scale Factor", "type": "number", "default": 1, "min": 0.1, "max": 5, "step": 0.1 }
+      ],
+      "color": "#ec4899"
+    },
+    {
+      "id": "trigonometric",
+      "name": "Trigonometric",
+      "formula": "y = A sin(Bx + C)",
+      "description": "Sine wave graph",
+      "parameters": [
+        { "name": "amplitude", "label": "Amplitude (A)", "type": "number", "default": 1, "min": 0.1, "max": 5, "step": 0.1 },
+        { "name": "frequency", "label": "Frequency (B)", "type": "number", "default": 1, "min": 0.1, "max": 5, "step": 0.1 },
+        { "name": "phase", "label": "Phase Shift (C)", "type": "number", "default": 0, "min": -3.14, "max": 3.14, "step": 0.1 }
+      ],
+      "color": "#f59e0b"
+    },
+    {
+      "id": "exponential",
+      "name": "Exponential",
+      "formula": "y = a × b^x",
+      "description": "Exponential growth graph",
+      "parameters": [
+        { "name": "a", "label": "Initial Value (a)", "type": "number", "default": 1, "min": 0.1, "max": 5, "step": 0.1 },
+        { "name": "b", "label": "Base (b)", "type": "number", "default": 2, "min": 1.1, "max": 5, "step": 0.1 }
+      ],
+      "color": "#10b981"
+    }
+  ],
+  "aiTutor": {
+    "greetings": [
+      "Hello! I'm MathGenius AI, your personal math tutor. What would you like to learn today? 🧮",
+      "Welcome! Ready to explore the wonderful world of mathematics? Ask me anything! ✨",
+      "Hi there! I'm here to help you understand math better. What's on your mind? 🎓",
+      "Great to see you! Let's tackle some math together. What topic interests you? 📚"
+    ],
+    "encouragements": [
+      "Excellent work! You're really getting it! 🌟",
+      "Perfect! That's exactly right! Keep going! ⚡",
+      "Brilliant thinking! You're on fire! 🔥",
+      "Amazing! Your math skills are impressive! 💪",
+      "Wonderful! You solved it like a pro! 🏆",
+      "Outstanding! That was a tough one too! 🎯",
+      "Superb! Your logical thinking is spot on! 🧠"
+    ],
+    "corrections": [
+      "Not quite right, but good effort! Let me help clarify... 🤔",
+      "Almost there! Let me walk you through the correct approach... 💡",
+      "Don't worry — mistakes help us learn! Here's the right method... 📖",
+      "Close! Let me clarify the concept step-by-step... 🎯"
+    ],
+    "responses": {
+      "algebra": "Algebra is the branch of math dealing with symbols and the rules for manipulating those symbols. Key concepts include: variables (like x, y), expressions (3x+2), and equations (3x+2=11). To solve linear equations, isolate the variable by performing inverse operations on both sides. 💡",
+      "quadratic": "A quadratic equation has the form ax²+bx+c=0. You can solve it by: 1) Factoring (if factorable), 2) Completing the square, or 3) The quadratic formula: x = (-b ± √(b²-4ac)) / 2a. The discriminant (b²-4ac) tells you: positive → 2 real roots, zero → 1 root, negative → no real roots. 📐",
+      "geometry": "Geometry studies shapes, sizes, and properties of figures. Key formulas: Area of rectangle = l×w, Circle area = πr², Triangle area = ½bh. For 3D: Cube volume = s³, Sphere = (4/3)πr³. The Pythagorean theorem (a²+b²=c²) is essential for right triangles. 📏",
+      "trigonometry": "Trigonometry studies relationships between angles and sides of triangles. Remember SOH-CAH-TOA: Sin = Opposite/Hypotenuse, Cos = Adjacent/Hypotenuse, Tan = Opposite/Adjacent. Key values: sin(30°)=0.5, cos(60°)=0.5, sin(90°)=1, tan(45°)=1. The Pythagorean identity: sin²θ + cos²θ = 1. 📐",
+      "percentage": "Percentage means 'per hundred'. Key formulas: X% of Y = (X/100)×Y. Profit% = (Profit/CP)×100. Loss% = (Loss/CP)×100. Discount% = (Discount/MP)×100. Simple Interest = (P×R×T)/100. Compound Interest: A = P(1+r/100)^t. 💰",
+      "calculus": "Calculus has two main branches: Differentiation (finding rate of change/slope) and Integration (finding area under curve). Key derivatives: d/dx(xⁿ) = nxⁿ⁻¹, d/dx(sin x) = cos x. Basic integration: ∫xⁿdx = xⁿ⁺¹/(n+1) + C. 📈",
+      "statistics": "Statistics analyzes data. Key measures: Mean = sum/count, Median = middle value, Mode = most frequent. Standard deviation measures spread. Probability = Favorable outcomes / Total outcomes. 📊",
+      "default": "Great question! Let me help you understand this concept. Mathematics is built on logical reasoning and pattern recognition. Start by identifying what you know, what you need to find, and which formula or method applies. Would you like me to explain a specific topic? 🧮"
+    },
+    "tips": [
+      { "topic": "general", "tip": "Break complex problems into smaller steps — it makes them much easier to solve!" },
+      { "topic": "algebra", "tip": "When solving equations, always perform the same operation on both sides to maintain balance." },
+      { "topic": "quadratic", "tip": "Check the discriminant (b²-4ac) first: it tells you how many real solutions exist." },
+      { "topic": "geometry", "tip": "Always draw a diagram first when solving geometry problems — it reveals patterns." },
+      { "topic": "trigonometry", "tip": "SOH-CAH-TOA: Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj" },
+      { "topic": "percentage", "tip": "To find X% of Y: multiply Y by X then divide by 100. Simple!" },
+      { "topic": "mental_math", "tip": "For quick multiplication: 15×N = (10×N) + (5×N) = 10N + N/2×10" },
+      { "topic": "fractions", "tip": "To add fractions: find common denominator first, then add numerators." },
+      { "topic": "graphs", "tip": "Plot at least 5-7 points when sketching a graph to see its true shape." },
+      { "topic": "equations", "tip": "Always verify your answer by substituting it back into the original equation!" }
+    ],
+    "keywords": {
+      "algebra": ["algebra", "equation", "solve", "variable", "x", "linear", "quadratic", "factor", "expand"],
+      "geometry": ["geometry", "area", "volume", "circle", "triangle", "rectangle", "square", "perimeter", "shape"],
+      "trigonometry": ["trigonometry", "trig", "sin", "cos", "tan", "angle", "hypotenuse", "radian", "degree"],
+      "percentage": ["percent", "percentage", "profit", "loss", "interest", "discount", "rate"],
+      "calculus": ["calculus", "derivative", "integral", "differentiate", "integrate", "limit", "slope"],
+      "statistics": ["statistics", "mean", "median", "mode", "average", "probability", "standard deviation"]
+    }
+  }
+}
